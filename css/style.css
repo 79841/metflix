@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&family=Roboto:wght@100;300;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #333;
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #bbb;
+  height: 3000px;
+  width: 100%;
+  background: #0a0a0a;
+}
+
+header {
+  width: 100%;
+  height: 7rem;
+  padding: 0 3rem;
+  background: linear-gradient(to top, transparent, #000);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: 0.2s;
+}
+
+header .logo {
+  min-width: 10rem;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  color: red;
+  text-transform: uppercase;
+}
+
+header .logo .fa-m {
+  display: none;
+}
+
+header .primary-nav {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .secondary-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+header .primary-nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  /* margin: 2rem; */
+}
+
+header ul li {
+  margin: 0 1rem;
+}
+
+header ul li a {
+  font-size: 2rem;
+  color: #ddd;
+  transition: 0.2s;
+}
+
+header ul li .active {
+  color: #fff;
+}
+
+header ul li a:hover {
+  opacity: 0.8;
+}
+
+header .fa-user {
+  font-size: 2.2rem;
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+header .fa-user:hover {
+  opacity: 0.8;
+}
+
+header .app-view-navbar {
+  display: none;
+}
+
+header .app-view-navbar {
+  position: fixed;
+  display: none;
+  top: 7rem;
+  left: 0;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s linear;
+}
+
+header .app-view-navbar ul {
+  display: flex;
+  width: 70%;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .app-view-navbar ul li {
+  width: auto;
+  text-align: center;
+}
+
+header .app-view-navbar ul li a {
+  font-size: 2rem;
+  display: block;
+  color: #ddd;
+}
+
+header .app-view-navbar ul li .active {
+  color: #fff;
+}
+
+header .app-view-navbar ul li a:hover {
+  opacity: 0.8;
+}
+
+.home {
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 5rem;
+}
+
+.home .img-slider {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  transition: 2s;
+}
+
+.home .img-slider a {
+  font-size: 0;
+}
+
+.home .img-slider a img {
+  width: 33.333333333%;
+  object-fit: cover;
+}
+
+.genre {
+  width: 100%;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.genre .movie-genre {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.genre .movie-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  /* height: 30rem; */
+}
+
+.genre .movie-container .movie {
+  position: relative;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  top: 3rem;
+}
+
+.genre .movie-container .movie img {
+  height: 20rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  transition: all 1s;
+  margin-bottom: 1rem;
+}
+
+.genre .movie-container .movie .movie-title {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.genre .movie-container .movie .overview {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  font-size: 1rem;
+  height: 25rem;
+  width: 15rem;
+  font-size: 1.2rem;
+  top: -50%;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.genre .movie-container .movie:hover img {
+  height: 25rem;
+  opacity: 0.3;
+}
+
+.genre .movie-container .movie:hover .overview {
+  opacity: 1;
+}
+
+.genre .movie-container::-webkit-scrollbar,
+.trending .trending-movie-container::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.genre .movie-container::-webkit-scrollbar-thumb,
+.trending .trending-movie-container::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  height: 30%;
+  background: #bf0613;
+
+  border-radius: 10px;
+}
+
+.genre .movie-container::-webkit-scrollbar-track,
+.trending .trending-movie-container::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: rgba(124, 5, 5, 0.1);
+}
+
+.trending h1 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.trending {
+  width: 100%;
+  padding: 2rem;
+}
+
+.trending .trending-movie-container {
+  width: 100%;
+  z-index: 1;
+  padding: 2rem;
+  height: 35rem;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.trending .trending-movie-container .movie {
+  position: relative;
+  top: 25rem;
+  margin-right: 2rem;
+}
+
+.trending .trending-movie-container .movie img {
+  height: 20rem;
+  object-fit: cover;
+  transform: rotateY(20deg);
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 91%);
+}
+
+.trending .trending-movie-container .movie img {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  transition: height 1s;
+}
+
+.trending .trending-movie-container .movie .ranking {
+  position: absolute;
+  color: #000;
+  font-size: 13rem;
+  transform: translate(-25%, -90%);
+  -webkit-text-stroke-width: 0.2rem;
+  -webkit-text-stroke-color: #fff;
+}
+
+.trending .trending-movie-container .movie .movie-title {
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.trending .trending-movie-container .movie .overview {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  font-size: 1rem;
+  height: 25rem;
+  width: 12rem;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  top: -30rem;
+  left: 2rem;
+  /* transform: translate(15%, -120%); */
+  opacity: 0;
+  transition: all 1s;
+}
+
+.trending .trending-movie-container .movie:hover img {
+  height: 25rem;
+  opacity: 0.3;
+}
+
+.trending .trending-movie-container .movie:hover .overview {
+  opacity: 1;
+}
+
+@media (max-width: 1300px) {
+  .home .img-slider a img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    width: 100vw;
+  }
+  header .primary-nav {
+    display: none;
+    width: 0;
+  }
+
+  header .app-view-navbar {
+    display: flex;
+  }
+
+  header .app-view-navbar ul li a {
+    font-size: 2rem;
+  }
+
+  header .logo .large-logo {
+    display: none;
+  }
+
+  header .logo .fa-m {
+    display: block;
+  }
+
+  .home .img-slider a img {
+    width: 100%;
+  }
+}
